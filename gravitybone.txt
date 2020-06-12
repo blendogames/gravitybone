@@ -1,0 +1,13 @@
+Source code for Gravity Bone
+
+Based on KMQuake2 by Knightmare
+and includes Lazarus by David Hyde & Mad Dog.
+
+Most code involves new gameplay objects in the game .dll. Note there's a fair amount of obsolete game objects that ended up not being used in Gravity Bone.
+
+Minor modifications were made to the UI shell to remove the multiplayer menus, add support for checkboxes, and change some menu formating.
+
+I've also included the GTKRadiant entities.def file used to make the maps.
+
+
+Brendon Chung, 2008
