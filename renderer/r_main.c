@@ -1131,7 +1131,7 @@ qboolean R_Init ( void *hinstance, void *hWnd, char *reason )
 	VID_Printf (PRINT_ALL, "GL_MAX_TEXTURE_SIZE: %i\n", gl_config.max_texsize );
 
 	gl_config.extensions_string = qglGetString (GL_EXTENSIONS);
-	VID_Printf (PRINT_ALL, "GL_EXTENSIONS: %s\n", gl_config.extensions_string );
+	//VID_Printf (PRINT_ALL, "GL_EXTENSIONS: %s\n", gl_config.extensions_string ); //BC 6-14-2020 don't print this, because it sometimes makes things crash.
 
 	strcpy( renderer_buffer, gl_config.renderer_string );
 	strlwr( renderer_buffer );
@@ -1532,7 +1532,7 @@ void GL_Strings_f (void)
 	VID_Printf (PRINT_ALL, "GL_RENDERER: %s\n", gl_config.renderer_string );
 	VID_Printf (PRINT_ALL, "GL_VERSION: %s\n", gl_config.version_string );
 	VID_Printf (PRINT_ALL, "GL_MAX_TEXTURE_SIZE: %i\n", gl_config.max_texsize );
-	VID_Printf (PRINT_ALL, "GL_EXTENSIONS: %s\n", gl_config.extensions_string );
+	//VID_Printf (PRINT_ALL, "GL_EXTENSIONS: %s\n", gl_config.extensions_string ); //BC 6-14-2020 don't print this, because it sometimes makes things crash.
 }
 
 
