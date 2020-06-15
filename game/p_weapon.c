@@ -1719,12 +1719,14 @@ void weapon_shotgun_fire (edict_t *ent, qboolean altfire)
 
 
 	
-
+	
 
 	viewing = LookingAt(ent,0,intersect,&range);
 	if(viewing && viewing->classname )
 	{
-		if(!stricmp(viewing->classname,"item_freezable") && range <= 21)
+		//gi.dprintf("viewlook range: %f\n", range);
+
+		if(!stricmp(viewing->classname,"item_freezable") && range <= 40) //BC 6-14-2020 This is the hammer hit range. Was: 21
 			T_Damage (viewing, ent, ent, forward, viewing->s.origin, vec3_origin, 1/*dmg*/, 40/*kick*/, 0, MOD_HIT );
 	}
 

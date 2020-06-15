@@ -678,8 +678,9 @@ void fire_freon (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed,
 	
 	AngleVectors (dir, forward, right, up);
 
-	VectorMA (dir, -0.1, right, dir);
-	VectorMA (dir, 0.07, up, dir);
+	//BC 6-14-2020 remove the offset so it aim more toward center crosshair.
+	//VectorMA (dir, -0.1, right, dir);
+	//VectorMA (dir, 0.07, up, dir);
 
 
 	VectorMA (dir, crandom() * 0.04, right, dir);
@@ -718,7 +719,7 @@ void fire_freon (edict_t *self, vec3_t start, vec3_t dir, int damage, int speed,
 
 	bolt->owner = self;
 	bolt->touch = freon_touch;
-	bolt->nextthink = level.time + 0.16;
+	bolt->nextthink = level.time + 0.25; //BC 6-14-2020 this determines how long the freon stays alive. The longer it stays alive, the farther it goes. Original: 0.16
 	bolt->think = G_FreeEdict;
 	bolt->dmg = 1;
 	bolt->classname = "bolt";
