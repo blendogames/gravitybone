@@ -3,7 +3,7 @@
 ## About
 This is the source code to [Gravity Bone (2008)](http://blendogames.com/older.htm#gravitybone).
 
-Gravity Bone uses idTech2, otherwise known as the Quake 2 engine.
+Gravity Bone uses [idTech2](https://en.wikipedia.org/wiki/Quake_II_engine), otherwise known as the Quake 2 engine.
 
 ## License
 This source code is licensed under the [GNU General Public License](https://github.com/blendogames/gravitybone/blob/master/LICENSE).
